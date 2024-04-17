@@ -3,13 +3,15 @@ copyright: Copyright &copy; 2024 Leeson Consulting Ltd.
 
 nav:
   - Home: 'index.md'
-  - Blog: '/blog'
+  - Blog:
+    - Overview: 'blog/index.md'
   - About:
     - License: 'license.md'
 
 theme:
   name: material
   features:
+    - navigation.indexes
     - navigation.tabs
     - navigation.footer
     - content.code.copy

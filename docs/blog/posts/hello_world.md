@@ -1,5 +1,4 @@
 ---
-draft: true
 date: 2024-04-17
 categories:
   - Hello World
@@ -42,10 +41,10 @@ int main()
 ```
 <img
   class="fit-picture"
-  src="/bytefield_example.svg"
+  src="../bytefield_example.svg"
   alt="bytefield_example.svg" />
 
-![Screenshot](/assets/leeson_logo.svg)
+![Screenshot](../assets/leeson_logo.svg)
 
 
 *And there's more*
