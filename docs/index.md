@@ -1,6 +1,6 @@
 # Welcome to leeson.github.io
 
-This is Leeson Consulting's site, ![leeson_logo.svg](/assets/leeson_logo.svg).
+This is Leeson Consulting's site, ![leeson_logo.svg](assets/leeson_logo.svg).
 
 ## Commands
 

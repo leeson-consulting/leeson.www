@@ -3,5 +3,36 @@ copyright: Copyright &copy; 2024 Leeson Consulting Ltd.
 
 nav:
   - Home: 'index.md'
+  - Blog: '/blog'
   - About:
     - License: 'license.md'
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.footer
+    - content.code.copy
+    - content.code.select
+
+plugins:
+  - awesome-pages
+  - blog
+  - search
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+extra_css:
+  - stylesheets/leeson.css
+
