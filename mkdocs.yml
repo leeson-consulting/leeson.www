@@ -1,1 +1,7 @@
-site_name: My Docs
+site_name: Leeson Consulting
+copyright: Copyright &copy; 2024 Leeson Consulting Ltd.
+
+nav:
+  - Home: 'index.md'
+  - About:
+    - License: 'license.md'

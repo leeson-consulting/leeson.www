@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Welcome to leeson.github.io
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is Leeson Consulting's site, ![leeson_logo.svg](/assets/leeson_logo.svg).
 
 ## Commands
 
