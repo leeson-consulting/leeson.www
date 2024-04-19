@@ -21,4 +21,4 @@ Features:
 
 This release has been tagged as **NOT Production Ready**.
 I'm looking for guinea-pigs to test the library --
-especically on Big-Endian architectures where it has had no testing to date due to a lack of hardware.
+especially on Big-Endian architectures where it has had no testing to date due to a lack of hardware.
