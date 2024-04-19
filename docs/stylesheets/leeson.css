@@ -2,3 +2,25 @@
 .md-grid {
   max-width: 100%; /* or 100%, if you want to stretch to full-width */
 }
+
+@font-face {
+    font-family: "Denmark";
+    src:url(denmark.ttf) ;
+}
+
+header,
+.md-header__title {
+    font-family: "Denmark";
+    font-size: 2em;
+    font-weight: 50;
+    color: #ff6600;
+}
+
+.md-typeset h1 {
+  font-family: var(--md-text-font-family);
+}
+
+.md-meta__list {
+  font-family: var(--md-text-font-family);
+}
+
