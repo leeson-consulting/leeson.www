@@ -10,6 +10,8 @@ nav:
 
 theme:
   name: material
+  logo: assets/leeson_logo.svg
+  favicon: assets/leeson_logo_192x192.png
   features:
     - navigation.indexes
     - navigation.tabs
