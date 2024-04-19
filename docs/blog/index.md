@@ -1,2 +1,2 @@
-# This is the Blog
+# Qere and Ketiv
 

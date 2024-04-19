@@ -20,7 +20,7 @@ and has over the last 15 years been involved with GAP training for Korean flagge
 We're based in Ōtautahi (Christchurch), which boasts temperate climes, an international airport, and a dedicated engineering community.
 
 On a personal note, we're both Christians.
-Our faith rests in המשיח ישוע (Yeshua Hamashiah).
+Our faith rests in המשיח ישוע (Yahshua Hamashiah).
 
 We fall short of the mark just like everyone else,
 but we choose to accept forgiveness and life promised by Yeshua to those who trust Him.
