@@ -1,2 +1,1 @@
-# Qere and Ketiv
-
+# Qere and Ketiv - Written to be Read
