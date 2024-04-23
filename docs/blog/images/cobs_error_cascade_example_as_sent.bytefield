@@ -1,0 +1,44 @@
+; SVG Colors
+(defattrs :bg-darkkhaki {:fill "#BDB76B"})
+
+; Bespoke Colors
+(defattrs :bg-green {:fill "#a0ffa0"})
+(defattrs :bg-yellow {:fill "#ffffa0"})
+(defattrs :bg-pink {:fill "#ffb0a0"})
+(defattrs :bg-cyan {:fill "#a0fafa"})
+(defattrs :bg-purple {:fill "#e4b5f7"})
+(defattrs :bg-orange {:fill "#df8700"})
+(defattrs :bg-red {:fill "#df875f"})
+
+(def boxes-per-row 18)
+(def box-width 80)
+
+;(draw-column-headers {:labels ["0" "1" "2" "3" "0" "1" "2" "3" "0" "1" "2" "3" "0" "1" "2" "ded"
+;"0" "1" "2" "3" "0" "1" "2" "3" "0" "1" "2" "3" "0" "1" "2" "ded"
+;]})
+
+;(draw-box "Address" {:span 4})
+;(draw-box "Size" {:span 2})
+;(draw-box 0 {:span 2})
+;(draw-gap "Payload")
+;(draw-bottom)
+
+(draw-box "COBS Data ..." {:span 2 :borders #{:left :top :bottom}})
+(draw-gap-inline)
+
+(draw-box "link(5)" [{:span 1} :plain :bg-green])
+(draw-box "0x03" [{:span 1} :hex])
+(draw-box "0xde" [{:span 1} :hex])
+(draw-box "0xad" [{:span 1} :hex])
+(draw-box "0x03" [{:span 1} :hex])
+(draw-box "link(1)" [{:span 1} :plain :bg-green])
+(draw-box "link(4)" [{:span 1} :plain :bg-green])
+(draw-box "0x03" [{:span 1} :hex])
+(draw-box "0xbe" [{:span 1} :hex])
+(draw-box "0xef" [{:span 1} :hex])
+(draw-box "link(42)" [{:span 1} :plain :bg-green])
+
+(draw-gap-inline)
+(draw-box "... COBS Data" {:span 2 :borders #{:right :top :bottom}})
+
+(next-row)
