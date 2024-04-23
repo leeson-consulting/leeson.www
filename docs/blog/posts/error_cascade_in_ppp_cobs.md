@@ -21,7 +21,7 @@ to bridge the gaps between those `0x00` values more than 255 bytes apart.
 
 COBS treats data exhausted of (or not containing) `0x00` as having a final `0x00` at the end of data.
 This dictates the repeated insertion of COBS Link-Bytes until the final link,
-which sets the location of the `0x00` used to terminate the COBS Frame.
+which sets the location of the `0x00` used as the Frame Terminator thus _sealing_ the COBS frame.
 
 Each COBS Link-Byte adds overhead at a consistent _worst-case rate_ of 1/255 of the message length.
 This is much better than the _worst-case rate_ for HDLC Byte Stuffing, which is twice the message length.
@@ -36,9 +36,21 @@ This is much better than the _worst-case rate_ for HDLC Byte Stuffing, which is 
     The worst and average overhead for random data is the same.
     The lowest overhead is the reciprocal of the message length, which is achieved by messages contain 0x00 at least once every 255 bytes.
 
-## PPP COBS Checksums
+## COBS-Checksum Interactions
 
 COBS is simply a framing scheme and does not define checksum requirements per se.
+
+Nevertheless a COBS receiver can correctly frame COBS encoded data 99.6% of the time due to the self-sealing nature of the frame.
+Undetected errors can still occur, but the frames themselves should be generally identifiable.
+
+Things become more complex when a checksum is added to detect data corruptions.
+
+If the checksum contains `0x00` then it will either need to be placed outside the frame or encoded so that it can be placed within the frame.
+Placing the checksum outside the frame introduces problems with frame synchronisation and should be avoided except under controlled conditions.
+COBS encoding the checksum adds immediate overhead in the form of a Link-Byte and generally complicates the process.
+
+## PPP COBS Checksums
+
 Stuart Cheshire presented COBS for his [PhD](http://stuartcheshire.org/papers/Dissertation.ps),
 and originally at [SIGCOMM '97](http://stuartcheshire.org/papers/COBSforSIGCOMM.ps).
 The focus for these and other discussions of COBS was around the reduced overhead compared to HDLC-style Byte Stuffing.
@@ -92,19 +104,37 @@ Later in an example implementation we find the following comment:
 
 ```
 
-So PPP COBS clearly favours calculating the FCS as a CRC across the PPP packet
+So PPP COBS clearly favours calculating the FCS as a CRC applied to the PPP packet
 **prior** to COBS encoding since the CRC may itself contain `0x00` values
 that would then need to be Byte Stuffed to ensure frame delineation.
 
+PPP COBS is not alone in this regard.
+
+**Every** COBS recommendation and implementation I have seen chooses to append a checksum to the data prior to COBS encoding.
+While this is much simpler, it can significantly reduce the strength of the checksum as we shall see.
+
 ## COBS Error Cascade
 
-CRCs are very good at detecting errors characterised as minimal and isolated.
-The principle measure of goodness is the Hamming Profile of a CRC polynomial,
-which describes the Hamming Distances achieved for various data lengths.
+When any link in a COBS chain is corrupted, the COBS decoder will incorrectly decode the next and subsequent links.
+A single COBS link error can therefore cascade into multiple errors at a rate of 8 bits per link (on average for uniform random data).
 
-Higher Hamming Distances confer higher levels of error detection,
-but CRCs used in common practice never see more than HD8 for practical data lengths.
+When the underlying data is long or contains frequent `0x00` values, many corruptions will occur due to the cascade.
 
-When the error count exceeds the maximum HD achievable at the given data length,
-the CRC error detection capability will degrade to a nominal value of `1/(2^h -1)`,
-where h is the degree of the underlying polynomial.
+If a checksum is used to detect data corruptions
+and that checksum is applied to the COBS encoded data,
+the checksum will be able to gate the decoding process
+thus generally avoiding the error cascade.
+
+However, if the checksum is applied to the unencoded data
+the checksum will not gate the decoding process.
+Instead the checksum will be asked to detect the error cascade
+introduced by the decoding process.
+If a CRC is used as the checksum,
+its error detection performance **will be compromised** by the cascade.
+
+In general, the probability of an undetected error in COBS framed data
+protected by a CRC applied to the unencoded data is:
+`1/255 * 1/2^poly_degree`.
+
+While this is low, it is many orders of magnitude worse than simply applying the same CRC to the COBS encoded data.
+
