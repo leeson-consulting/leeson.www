@@ -1,4 +1,4 @@
-# leeson.github.io License
+# Leeson WWW License
 
 All content of this repository is Copyright (c) 2024 Leeson Consulting Limited, unless otherwise noted.
 
