@@ -24,3 +24,14 @@ header,
   font-family: var(--md-text-font-family);
 }
 
+.md-header {
+  height: 120px;
+}
+
+/*
+:root {
+  --md-primary-fg-color:        #FFEED5;
+  --md-primary-fg-color--light: #FFEED5;
+  --md-primary-fg-color--dark:  #FFEED5;
+}
+*/

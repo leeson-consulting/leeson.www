@@ -1,15 +1,17 @@
-site_name: Leeson Consulting
+site_banner: '<img height="100" src="/assets/leeson_banner.svg" alt="Leeson Consulting"/>'
+site_name: 'Leeson Consulting'
+
 copyright: Copyright &copy; 2024 Leeson Consulting Ltd.
 
 nav:
-  - Home: 'index.md'
+  - Haere mai: 'index.md'
   - Blog:
     - Overview: 'blog/index.md'
-  - About:
-    - License: 'license.md'
+  - License: 'license.md'
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/leeson_logo.svg
   favicon: assets/leeson_logo_192x192.png
   features:
@@ -25,6 +27,7 @@ plugins:
   - search
 
 markdown_extensions:
+  - attr_list
   - admonition
   - pymdownx.details
   - pymdownx.superfences:
