@@ -30,8 +30,11 @@ Joining the dots we can see the big picture:
 
 !!! Customisation
 
-    Frame Delimeters aren't restricted to the value `255`, so how do you deal with the default COBS Terminator ie. `0x00`?
-    First perform the base conversion. Then XOR each byte with `0x01`.
+    Frame Delimeters aren't restricted to the value `255`, so how do you deal with them?
+
+    The default COBS Terminator `0x00` can be eliminated from the data by first performing the `Base_255` conversion,
+    then `XOR`ing each byte with `0xff`.
+    Other values can be elimated by transposition etc.
 
 The conversion process expands the number of bits required to store the new number, so what's the transmission cost?
 Going back to high school maths we can say that a number A requiring N `Base_256` digits
