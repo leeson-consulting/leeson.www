@@ -1,1 +1,1 @@
-# Qere and Ketiv - Written to be Read
+# When words are your only art
