@@ -1,15 +1,20 @@
 .navbar-brand {
-    background-image: url(../assets/leeson_blue_banner_logo.svg);
-    background-repeat: no-repeat;
-    height:150px;
+  background-image: url(../assets/leeson_blue_no_bg_banner_logo.svg);
+  background-repeat: no-repeat;
+  height:100px;
+  width:400px;
+  display:inline-block;
 }
 
 @media only screen and (max-width:600px) {
-    .navbar-brand {
-      background-image: url(../assets/leeson_blue_basic_logo.svg);
-      background-repeat: no-repeat;
-      height:150px;
-    }
+  .navbar-brand {
+    background-image: url(../assets/leeson_blue_no_bg_basic_logo.svg);
+    background-size: 170px;
+    background-repeat: no-repeat;
+    height:100px;
+    width: 170px;
+    display:inline-block;
+  }
 }
 
 /* Maximum space for text block */
@@ -39,13 +44,29 @@ header,
 }
 
 .md-header {
-  height: 120px;
+  height:105px;
 }
 
-/*
-:root {
-  --md-primary-fg-color:        #FFEED5;
-  --md-primary-fg-color--light: #FFEED5;
-  --md-primary-fg-color--dark:  #FFEED5;
+@media only screen and (min-width:800px) {
+  .md-header {
+    height: 110px;
+  }
 }
-*/
+
+@media only screen and (max-width:600px) {
+  .md-header {
+    height:80px;
+  }
+}
+
+.md-search {
+  display: inline;
+}
+
+.md-search__input {
+  position: absolute;
+}
+
+.md-header__button {
+  float: right;
+}
