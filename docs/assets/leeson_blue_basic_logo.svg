@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="144.29453mm"
+   width="65.051781mm"
    height="30.194887mm"
-   viewBox="0 0 511.2798 106.98975"
+   viewBox="0 0 230.49843 106.98975"
    id="svg9854"
    version="1.1"
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
@@ -125,7 +125,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="296.75"
+     inkscape:cx="111.5"
      inkscape:cy="92"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -147,8 +147,8 @@
     <inkscape:grid
        id="grid1"
        units="px"
-       originx="-55.382382"
-       originy="-85.254344"
+       originx="-55.382384"
+       originy="-85.25434"
        spacingx="0.93749996"
        spacingy="0.93749996"
        empcolor="#0099e5"
@@ -180,15 +180,15 @@
     <g
        id="g1">
       <rect
-         style="fill:#4051b5;fill-opacity:1;stroke:none;stroke-width:1.91123;stroke-dasharray:none"
+         style="fill:#4051b5;fill-opacity:1;stroke:none;stroke-width:1.28327;stroke-dasharray:none"
          id="rect5"
-         width="511.27979"
+         width="230.49843"
          height="106.98975"
          x="394.42056"
          y="518.57837" />
       <g
          id="g4"
-         transform="translate(-150.70316,4.8549226)">
+         transform="translate(-148.27091,4.8549242)">
         <g
            style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:35px;line-height:125%;font-family:Denmark;-inkscape-font-specification:'Denmark, Thin';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
            id="text3891-5-4-7-8-3-0-6-6-45"
@@ -239,17 +239,17 @@
            id="path15014-9-5-7-9-6"
            style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:35px;line-height:125%;font-family:Denmark;-inkscape-font-specification:'Denmark, Thin';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.69731" />
       </g>
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-size:35px;line-height:1.25;font-family:Denmark;-inkscape-font-specification:Denmark;stroke-width:0.9375"
-       x="365.20358"
-       y="577.09528"
-       id="text11"><tspan
-         sodipodi:role="line"
-         id="tspan11"
-         style="stroke-width:0.9375"
+      <text
+         xml:space="preserve"
+         style="font-size:35px;line-height:1.25;font-family:Denmark;-inkscape-font-specification:Denmark;stroke-width:0.9375"
          x="365.20358"
-         y="577.09528" /></text>
+         y="577.09528"
+         id="text11"><tspan
+           sodipodi:role="line"
+           id="tspan11"
+           style="stroke-width:0.9375"
+           x="365.20358"
+           y="577.09528" /></text>
+    </g>
   </g>
 </svg>
