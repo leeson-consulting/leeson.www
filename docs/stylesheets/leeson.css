@@ -1,3 +1,17 @@
+.navbar-brand {
+    background-image: url(../assets/leeson_blue_banner_logo.svg);
+    background-repeat: no-repeat;
+    height:150px;
+}
+
+@media only screen and (max-width:800px) {
+    .navbar-brand {
+      background-image: url(../assets/leeson_blue_basic_logo.svg);
+      background-repeat: no-repeat;
+      height:150px;
+    }
+}
+
 /* Maximum space for text block */
 .md-grid {
   max-width: 100%; /* or 100%, if you want to stretch to full-width */
