@@ -4,7 +4,7 @@
     height:150px;
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:600px) {
     .navbar-brand {
       background-image: url(../assets/leeson_blue_basic_logo.svg);
       background-repeat: no-repeat;
