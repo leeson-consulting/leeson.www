@@ -6,8 +6,10 @@ copyright: Copyright &copy; 2024 Leeson Consulting Ltd.
 
 nav:
   - Haere mai: 'index.md'
-  - Blog:
-    - Overview: 'blog/index.md'
+  - Open Source:
+    - 'open_source/index.md'
+  - Protocol Design:
+    - 'protocol_design/index.md'
   - License: 'license.md'
 
 theme:
@@ -24,7 +26,10 @@ theme:
 
 plugins:
   - awesome-pages
-  - blog
+  - blog:
+      blog_dir: open_source
+  - blog:
+      blog_dir: protocol_design
   - search
 
 markdown_extensions:
